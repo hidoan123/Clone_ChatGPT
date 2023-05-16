@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 public class HistoryChat extends AppCompatActivity {
 
+    private String n;
     ListView lvChat;
     ArrayList<ChatOop> chatOopArrayList;
     ChatAdapter adapter;
@@ -49,6 +50,7 @@ public class HistoryChat extends AppCompatActivity {
         adapter.notifyDataSetChanged();
 
     }
+    // hiuhuuuu
     public void DialogXoaChat(int id)
     {
         database = SQLiteDatabase.openDatabase(getDatabasePath("History.sqlite").getAbsolutePath(), null, SQLiteDatabase.OPEN_READWRITE);
