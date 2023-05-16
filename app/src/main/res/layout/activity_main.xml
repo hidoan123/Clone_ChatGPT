@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:background="@color/teal_200"
+        android:id="@+id/rlt_title"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/img_History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_history_24" />
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_logout_24"
+            android:id="@+id/img_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/rlt_title"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"/>
+
+    <TextView
+        android:id="@+id/welcome_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Hello!"
+        android:textSize="25sp" />
+    <RelativeLayout
+        android:padding="8dp"
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <EditText
+            android:layout_toLeftOf="@id/send_btn"
+            android:background="@drawable/backround_textmessage"
+            android:hint="nhập vào đây..."
+            android:layout_centerInParent="true"
+            android:id="@+id/message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"/>
+        <ImageView
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_marginStart="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/send_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
